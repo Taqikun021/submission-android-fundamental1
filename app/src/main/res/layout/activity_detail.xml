@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:contentDescription="@string/avatar"
+            android:src="@drawable/users"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/avatar"
+            app:layout_constraintTop_toTopOf="@id/avatar"
+            tools:text="Name" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:alpha="0.7"
+            android:ellipsize="end"
+            android:fontFamily="@font/open_sans"
+            android:maxLines="1"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/avatar"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            tools:text="amitsekhariitbhu" />
+
+        <TextView
+            android:id="@+id/company"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/open_sans"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/avatar"
+            app:layout_constraintTop_toBottomOf="@id/username"
+            tools:text="His Company" />
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:alpha="0.6"
+            android:fontFamily="@font/open_sans"
+            android:gravity="center_vertical"
+            app:drawableStartCompat="@drawable/ic_baseline_location_on_24"
+            app:drawableTint="?android:attr/textColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/avatar"
+            tools:text="His Location" />
+
+        <TextView
+            android:id="@+id/repository"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:alpha="0.6"
+            android:fontFamily="@font/open_sans"
+            android:gravity="center_vertical|end"
+            app:drawableStartCompat="@drawable/ic_baseline_book_24"
+            app:drawableTint="?android:attr/textColor"
+            app:layout_constraintEnd_toStartOf="@id/follow"
+            app:layout_constraintTop_toBottomOf="@id/location"
+            tools:text="24" />
+
+        <TextView
+            android:id="@+id/follow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:alpha="0.6"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/open_sans"
+            android:gravity="center_vertical"
+            app:drawableStartCompat="@drawable/ic_baseline_people_outline_24"
+            app:drawableTint="?android:attr/textColor"
+            app:layout_constraintStart_toEndOf="@id/repository"
+            app:layout_constraintTop_toBottomOf="@id/location"
+            tools:text="21 follower - 21 following" />
+
+        <Button
+            android:id="@+id/shareButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/share"
+            android:textAllCaps="false"
+            app:layout_constraintTop_toBottomOf="@id/repository" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
